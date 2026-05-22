@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  bot-financeiro:
+    build: .
+    container_name: bot-financeiro
+    environment:
+      - TZ=America/Recife
+      - BOT_NOME=Financeiro
+    volumes:
+      - ./auth_financeiro:/app/auth_info
+    restart: always
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
