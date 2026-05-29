@@ -141,6 +141,8 @@ module.exports = async function boletoStage(
         }
 
         if (Array.isArray(parcelas) && parcelas.length > 0) {
+          console.log("=== DADOS QUE VIERAM DA API ===", parcelas[0]);
+
           const idExtraido = parcelas[0].codigo;
           estado.id_cliente = idExtraido;
           const nomeEmpresa =
