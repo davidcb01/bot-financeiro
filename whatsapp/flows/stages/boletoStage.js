@@ -146,7 +146,10 @@ module.exports = async function boletoStage(
           const idExtraido = parcelas[0].codigo;
           estado.id_cliente = idExtraido;
           const nomeEmpresa =
-            parcelas[0].razao || parcelas[0].empresa || "Cliente Financeiro";
+            parcelas[0].nome ||
+            parcelas[0].razao ||
+            parcelas[0].empresa ||
+            nomeWhats;
 
           try {
             await salvarCadastroCliente(
