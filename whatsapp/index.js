@@ -51,11 +51,14 @@ async function iniciarWhatsApp() {
   );
 
   const sock = makeWASocket({
-    version,
+    version: [2, 3000, 1025190524],
     auth: state,
     logger: pino({ level: "silent" }),
     printQRInTerminal: true,
-    browser: Browsers.ubuntu("Desktop"),
+    browser: ["Windows", "Chrome", "Chrome 114.0.5735.198"],
+    keepAliveIntervalMs: 30000,
+    connectTimeoutMs: 60000,
+    defaultQueryTimeoutMs: undefined,
   });
 
   sock.ev.on("creds.update", saveCreds);
