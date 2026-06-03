@@ -256,7 +256,6 @@ async function verificarComandosAdmin(
 
       await salvarEstado(jid, novoEstado, meuPerfil);
       // Feedback visual igual ao principal
-      await sock.sendMessage(idBruto, { react: { text: "🔄", key: msg.key } });
       console.log(`[COMANDO] Reset de menu efetuado para ${jid}`);
       return { stop: true };
     }
