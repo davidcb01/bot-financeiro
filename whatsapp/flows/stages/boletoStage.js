@@ -92,7 +92,9 @@ module.exports = async function boletoStage(
       );
       const novoEstado = { ...criarEstadoInicial(), nome_perfil: nomeWhats };
       await salvarEstado(jid, novoEstado, meuPerfil);
-      await sock.sendMessage(idBruto, { text: "✅ Atendimento finalizado!" });
+      await sock.sendMessage(idBruto, {
+        text: "✅ Atendimento finalizado. A IQ Sistemas agradece o contato!",
+      });
       return;
     }
 
@@ -316,7 +318,9 @@ module.exports = async function boletoStage(
       );
       const novoEstado = { ...criarEstadoInicial(), nome_perfil: nomeWhats };
       await salvarEstado(jid, novoEstado, meuPerfil);
-      await sock.sendMessage(idBruto, { text: "✅ Atendimento finalizado!" });
+      await sock.sendMessage(idBruto, {
+        text: "✅ Atendimento finalizado. A IQ Sistemas agradece o contato!",
+      });
       return;
     }
 

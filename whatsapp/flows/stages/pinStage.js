@@ -92,7 +92,9 @@ module.exports = async function pinStage(
         menu: "PRINCIPAL",
       };
       await salvarEstado(jid, novoEstado, meuPerfil);
-      await sock.sendMessage(idBruto, { text: "✅ Atendimento finalizado!" });
+      await sock.sendMessage(idBruto, {
+        text: "✅ Atendimento finalizado. A IQ Sistemas agradece o contato!",
+      });
       return;
     }
 
@@ -243,7 +245,7 @@ module.exports = async function pinStage(
       };
       await salvarEstado(jid, novoEstado, meuPerfil);
       await sock.sendMessage(idBruto, {
-        text: "✅ *Atendimento finalizado!* Se precisar de algo mais, é só chamar.",
+        text: "✅ Atendimento finalizado. A IQ Sistemas agradece o contato!",
       });
       return;
     }
