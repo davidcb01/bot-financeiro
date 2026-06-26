@@ -1,9 +1,9 @@
-version: "3.8"
-
 services:
   bot-financeiro:
     build: .
     container_name: bot-financeiro
+    ports:
+      - "3006:3000"  # <--- ADICIONE ISSO se o painel precisar acessar o bot
     environment:
       - TZ=America/Recife
       - BOT_NOME=Financeiro
