@@ -2,7 +2,7 @@ const mysql = require("mysql2/promise");
 
 const pool = mysql.createPool({
   host: "host.docker.internal",
-  port: 3006,
+  port: 3306,
   charset: "utf8mb4",
   user: "root",
   password: "iq@2013tex",
